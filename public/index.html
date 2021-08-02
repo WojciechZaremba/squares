@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+<head>
+    <meta name="google" content="notranslate">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>People online:</h2>
+    <div id="usersBox"></div>
+    <div id="sqrsContainer"></div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            overscroll-behavior: contain; 
+        }
+        #sqrsContainer {
+            display: block;
+            margin: auto;
+            background-color: grey;
+            width: 500px;
+            height: 500px;
+        }
+        .square {
+            position: absolute;
+            background: black;
+            width: 50px;
+            height: 50px;
+        }
+        #defaultSq {
+            position: absolute;
+            background: black;
+            width: 50px;
+            height: 50px;
+        }
+        #usersBox {
+            position: absolute;
+            margin-left: 40px;
+            display: grid;
+            grid-template-columns: 40px 40px 40px 40px 40px;
+            width: 250px;
+            height: auto;
+            background-color: ivory;
+            /* border: solid black 1px; */
+        }
+        .userAvatar {
+            box-sizing: content-box;
+            margin: 5px;
+            width: 25px;
+            height: 25px;
+            background: black;
+        }
+    </style>
+</body>
+</html>
